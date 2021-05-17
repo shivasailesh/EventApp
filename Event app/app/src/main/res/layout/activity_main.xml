@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/homePage_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Event Management App"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/homePage_adminBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePage_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Admin" />
+
+    <Button
+        android:id="@+id/homePage_userBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePage_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/homePage_adminBtn"
+        android:text="User" />
+
+
+    <RelativeLayout
+        android:id="@+id/homePage_adminRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/homePage_adminBtn"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/homePage_adminUserName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="UserName"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/homePage_adminPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePage_adminUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/homePage_adminLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePage_adminPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Login" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/homePage_userRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/homePage_adminBtn"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/homePage_userUserName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="UserName"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/homePage_userPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePage_userUserName"
+            android:layout_centerHorizontal="true"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/homePage_userLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePage_userPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homePage_newUserText"
+            android:text="Are you a New User? Register"
+            android:layout_below="@+id/homePage_userLoginBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
